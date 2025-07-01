@@ -120,7 +120,7 @@
 
     <!-- PROPAGANDA ESTILO ARCADE PISCANTE -->
     <div class="propaganda">
-        🔥 <a href="#" target="_blank"id='ok'>CONFERIR A OPORTUNIDADE NÃO PERCA</a> ⚡
+        🔥 <a href="https://vpserp.vercel.app/" target="_blank"id='ok'>CONFERIR A OPORTUNIDADE NÃO PERCA</a> ⚡
     </div>
 
     <!-- SEÇÃO DE VÍDEOS YOUTUBE -->
@@ -128,7 +128,7 @@
         <!-- Vídeos via JavaScript -->
     </div>
      <div class="propaganda">
-        🔥 <a href="#" target="_blank"id='ok'>CONFERIR A OPORTUNIDADE NÃO PERCA</a> ⚡
+        🔥 <a href="https://www.youtube.com/@gamenologia" target="_blank"id='ok'>CONFERIR A OPORTUNIDADE NÃO PERCA</a> ⚡
     </div>
 
 
