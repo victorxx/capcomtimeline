@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- METATAGS SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Últimas notícias e vídeos sobre Capcom e Ubisoft. Atualizações diárias do mundo gamer com estilo Mega Man.">
+    <meta name="keywords" content="Capcom, Ubisoft, Mega Man, notícias, games, lançamentos, vídeos, trailers, gameplay">
+    <meta name="author" content="Seu Nome">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0073e6">
+    <meta property="og:title" content="Notícias Capcom & Ubisoft - Tema Mega Man">
+    <meta property="og:description" content="As últimas atualizações das gigantes Capcom e Ubisoft, com estilo inspirado em Mega Man.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seudominio.com">
+    <meta property="og:image" content="https://seudominio.com/megaman-banner.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Notícias Capcom & Ubisoft - Tema Mega Man</title>
+
+    <!-- CSS INTERNO COM TEMA MEGA MAN -->
+    <style>
+        /* Fonte digital alternativa */
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background: linear-gradient(to bottom, #e6f3ff, #b3e0ff);
+            color: #003366;
+            margin: 0;
+            padding: 0;
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(0, 115, 230, 0.05),
+                rgba(0, 115, 230, 0.05) 10px,
+                transparent 10px,
+                transparent 20px
+            ); /* fundo sutil com listras diagonais */
+        }
+
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        #clock {
+            font-size: 18px;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        .noticias, .videos {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .noticia {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 6px solid #0073e6;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .noticia h2 {
+            color: #004d99;
+        }
+
+        .videos iframe {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 30px;
+            border: 3px solid #0073e6;
+            border-radius: 8px;
+        }
+
+        .propaganda {
+            text-align: center;
+            background-color: #ffff00;
+            color: #cc0000;
+            font-weight: bold;
+            padding: 20px;
+            margin: 40px auto;
+            animation: blink 1s infinite;
+            max-width: 600px;
+            border: 3px dashed #ff9900;
+            border-radius: 8px;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO COM RELÓGIO -->
+    <header>
+        <h1>🎮 Notícias Capcom & Ubisoft - Estilo Mega Man</h1>
+        <div id="clock">00:00:00</div>
+    </header>
+ <div class="propaganda">
+        🔥 <a href="#" target="_blank"id='ok'>CONFERIR A OPORTUNIDADE NÃO PERCA</a> ⚡
+    </div>
+
+    <!-- SEÇÃO DE NOTÍCIAS -->
+    <div class="noticias" id="noticias-container">
+        <!-- Conteúdo dinâmico via JavaScript -->
+    </div>
+
+    <!-- PROPAGANDA ESTILO ARCADE PISCANTE -->
+    <div class="propaganda">
+        🔥 <a href="#" target="_blank"id='ok'>CONFERIR A OPORTUNIDADE NÃO PERCA</a> ⚡
+    </div>
+
+    <!-- SEÇÃO DE VÍDEOS YOUTUBE -->
+    <div class="videos" id="videos-container">
+        <!-- Vídeos via JavaScript -->
+    </div>
+     <div class="propaganda">
+        🔥 <a href="#" target="_blank"id='ok'>CONFERIR A OPORTUNIDADE NÃO PERCA</a> ⚡
+    </div>
+
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script>
+        // RELÓGIO AO VIVO
+        function atualizaRelogio() {
+            const agora = new Date();
+            const horas = String(agora.getHours()).padStart(2, '0');
+            const minutos = String(agora.getMinutes()).padStart(2, '0');
+            const segundos = String(agora.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${horas}:${minutos}:${segundos}`;
+        }
+        setInterval(atualizaRelogio, 1000);
+        atualizaRelogio(); // inicializa imediatamente
+
+        // ARRAY DE NOTÍCIAS
+        const noticias = [
+            {
+                titulo: "Mega Man volta às origens com novo jogo 2D",
+                conteudo: "Capcom anuncia um novo título clássico 2D de Mega Man com gráficos retrô e jogabilidade tradicional."
+            },
+            {
+                titulo: "Ubisoft revela detalhes de Assassin’s Creed Hexe",
+                conteudo: "Novo trailer mostra ambientação sombria, bruxaria e mecânicas inéditas."
+            },
+            {
+                titulo: "Capcom confirma Resident Evil 9 em produção",
+                conteudo: "Mais uma sequência da franquia de terror foi oficialmente confirmada para 2026."
+            }
+        ];
+
+        // INSERE NOTÍCIAS
+        const containerNoticias = document.getElementById('noticias-container');
+        noticias.forEach(noticia => {
+            const div = document.createElement('div');
+            div.className = 'noticia';
+            div.innerHTML = `<h2>${noticia.titulo}</h2><p>${noticia.conteudo}</p>`;
+            containerNoticias.appendChild(div);
+        });
+
+        // ARRAY DE VÍDEOS (IDs do YouTube)
+        const videosYouTube = [
+            "D0Vw2BijeyM", // Exemplo: trailer ou gameplay
+            "rgJw6lbiRuI"  // Adicione mais IDs aqui
+        ];
+
+        // INSERE VÍDEOS
+        const containerVideos = document.getElementById('videos-container');
+        videosYouTube.forEach(id => {
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${id}`;
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframe.allowFullscreen = true;
+            containerVideos.appendChild(iframe);
+        });
+    </script>
+      <script>
+    function mudar(){
+        const links=[
+        "https://hostinger.com.br?REFERRALCODE=SSNVICTORXU8",
+        "https://geocredibnkvitoria.com/",
+        "https://vpserp.vercel.app/",
+        "https://creditopessoal.vercel.app/",
+        "https://brasilbrasileiross.blogspot.com/",
+        "https://stfly.biz/7MNLF",
+        "https://www.espiritosanto-es.com.br/linhadotempovitoria/",
+        "https://piadasrepositorio.vercel.app/",
+        "https://www.youtube.com/watch?v=gBclanEnn88",
+        "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+        "https://www.youtube.com/@gamenologia",
+        "https://jogosantigos472302513.wordpress.com/maquinas-vps-temos-todas-as-opcoes-de-maqinas-para-voce/",
+        "https://bibliadonline.netlify.app/",
+        "https://www.larissasaib.com.br/",
+        "https://remarkable-gelato-4db597.netlify.app/consorciopagina.html",
+        "https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g",
+        "https://laudobancriotimline.netlify.app/"
+        ];
+        function random(arr){
+            return Math.floor(Math.random()* arr.length);
+        }
+        const mudaar=random(links);
+        const mudei=links[mudaar];
+        document.getElementById('ok').href=mudei;
+    }
+    setInterval(mudar,400);
+  </script>
+<!-----------------CONTROLA A PROPAGANDA-->
+
+</body>
+</html>
